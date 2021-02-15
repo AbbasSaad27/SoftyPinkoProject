@@ -1,0 +1,2 @@
+# SoftyPinkoProject
+For practicing JS
