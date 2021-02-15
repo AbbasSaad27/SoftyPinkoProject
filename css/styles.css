@@ -222,8 +222,7 @@ a {
   display: flex;
 }
 .img--right {
-  display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 }
 .section--work-process {
   background-image: url(../images/work-process-bg.png);
