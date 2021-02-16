@@ -43,18 +43,23 @@ a {
   top: 4rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: 100;
+  overflow: hidden;
   transition: all 0.3s;
 }
 .navigation a {
   color: rgba(0, 0, 0, 0.7);
+}
+.nav a {
+  color: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s;
 }
 .open-nav {
   display: none;
 }
 .nav-opener {
   position: absolute;
-  right: 5rem;
+  right: 4rem;
   cursor: pointer;
   display: none;
 }
@@ -63,17 +68,29 @@ a {
   height: 0.2rem;
   background-color: black;
   margin-top: 0.8rem;
-  transition: all 0.3s;
+  position: relative;
+  top: 0;
+  transition: all 0.5s;
+}
+.line-opacity-0 {
+  opacity: 0;
+}
+.line-top-clicked {
+  transform: rotate(45deg);
+  top: 0.8rem;
+}
+.line-bottom-clicked {
+  transform: rotate(-45deg);
+  top: -1.2rem;
 }
 .line-middle {
   width: 4rem;
+  transition-duration: 0.3s;
 }
 .nav--mobile {
-  margin-top: 2rem;
-  display: none;
+  margin-top: 3rem;
 }
 .nav--mobile li {
-  padding: 1.5rem;
   border-top: 0.1rem solid rgba(139, 139, 139, 0.6);
   transition: all 0.3s;
 }
@@ -86,10 +103,20 @@ a {
 }
 .nav--mobile a {
   display: block;
-  height: 100%;
+  padding: 1.5rem;
 }
+.nav-expand {
+  height: 42rem;
+}
+.unhide-nav {
+  display: block;
+}
+
 .logo {
   width: 15rem;
+}
+.nav-color {
+  color: rgb(255, 105, 130);
 }
 .nav {
   display: flex;
@@ -99,6 +126,9 @@ a {
   margin-top: -2.5rem;
   margin-left: 25rem;
   color: rgba(0, 0, 0, 0.5);
+}
+.nav a:hover {
+  color: rgb(255, 105, 130);
 }
 .welcome {
   width: 40%;
@@ -110,7 +140,7 @@ a {
   font-size: 3rem;
   color: white;
   letter-spacing: 0.2rem;
-  line-height: 3rem;
+  line-height: 3.5rem;
   margin-bottom: 4rem;
 }
 .sub--text {
@@ -132,6 +162,7 @@ a {
 }
 .btn--discover {
   background-color: rgb(255, 105, 130);
+  margin-bottom: 5rem;
 }
 .btn--discover:hover {
   background-color: rgb(113, 113, 226);
@@ -147,12 +178,22 @@ a {
 .feature {
   background-color: white;
   padding: 3rem 2rem;
-  margin-top: 5rem;
   border-radius: 3rem;
   width: 34rem;
+  margin-top: 5rem;
   line-height: 3rem;
   word-spacing: 0.3rem;
   box-shadow: 0rem 1rem 2.5rem 0.2rem rgba(218, 218, 218, 0.5);
+  position: relative;
+  top: 0;
+  opacity: 1;
+  transition: all 1s;
+}
+.feature2 {
+  transition-delay: 0.2s;
+}
+.feature3 {
+  transition-delay: 0.4s;
 }
 .featured--img {
   font-size: 5rem;
@@ -220,6 +261,18 @@ a {
 }
 .about--img {
   display: flex;
+  opacity: 1;
+  position: relative;
+  left: 0;
+  transition: all 1s;
+}
+.img-fadeIn--1 {
+  left: -4rem;
+  opacity: 0;
+}
+.img-fadeIn--2 {
+  left: 4rem;
+  opacity: 0;
 }
 .img--right {
   justify-content: flex-end;
@@ -379,6 +432,19 @@ a {
   padding: 3rem 2rem;
   width: 34rem;
   margin-top: 5rem;
+  position: relative;
+  top: 0;
+  transition: all 1s;
+}
+.price2 {
+  transition-delay: 0.3s;
+}
+.price3 {
+  transition-delay: 0.6s;
+}
+.fadeIn-effect {
+  top: 4rem;
+  opacity: 0;
 }
 .package {
   font-size: 1.6rem;
@@ -749,5 +815,8 @@ input {
   .featured--img {
     width: 50%;
     padding: 3rem 2.5rem;
+  }
+  .featured--img {
+    padding: 4rem 0rem;
   }
 }
