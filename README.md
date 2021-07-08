@@ -1,2 +1,2 @@
 # SoftyPinkoProject
-For practicing JS
+For practicing JS DOM Manipulation
